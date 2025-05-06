@@ -1,0 +1,18 @@
+Результати запитів:
+
+// Клієнти старші за 30
+[
+  { "client_id": 1, "name": "Олександр Коваль", "age": 35, "email": "okoval@example.com" },
+  { "client_id": 3, "name": "Ігор Петренко", "age": 41, "email": "ipetrenko@example.com" }
+]
+
+// Тренування із середньою складністю
+[
+  { "workout_id": 2, "description": "Силові тренування", "difficulty": "medium" },
+  { "workout_id": 4, "description": "Функціональне тренування", "difficulty": "medium" }
+]
+
+// Членство клієнта з client_id = 1
+[
+  { "membership_id": 1, "client_id": 1, "start_date": "2025-01-01T00:00:00Z", "end_date": "2025-12-31T00:00:00Z", "type": "Premium" }
+]

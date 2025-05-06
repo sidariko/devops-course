@@ -1,0 +1,33 @@
+// === Створення бази та колекцій ===
+use gymDatabase
+
+db.createCollection("clients")
+db.createCollection("memberships")
+db.createCollection("workouts")
+db.createCollection("trainers")
+
+// === Заповнення колекцій ===
+db.clients.insertMany([
+  { client_id: 1, name: "Олександр Коваль", age: 35, email: "okoval@example.com" },
+  { client_id: 2, name: "Марія Іваненко", age: 28, email: "mivanenko@example.com" },
+  { client_id: 3, name: "Ігор Петренко", age: 41, email: "ipetrenko@example.com" }
+])
+
+db.memberships.insertMany([
+  { membership_id: 1, client_id: 1, start_date: ISODate("2025-01-01T00:00:00Z"), end_date: ISODate("2025-12-31T00:00:00Z"), type: "Premium" },
+  { membership_id: 2, client_id: 2, start_date: ISODate("2025-03-15T00:00:00Z"), end_date: ISODate("2025-09-15T00:00:00Z"), type: "Standard" },
+  { membership_id: 3, client_id: 3, start_date: ISODate("2025-02-10T00:00:00Z"), end_date: ISODate("2025-08-10T00:00:00Z"), type: "Basic" }
+])
+
+db.workouts.insertMany([
+  { workout_id: 1, description: "Кардіо", difficulty: "easy" },
+  { workout_id: 2, description: "Силові тренування", difficulty: "medium" },
+  { workout_id: 3, description: "Кросфіт", difficulty: "hard" },
+  { workout_id: 4, description: "Функціональне тренування", difficulty: "medium" }
+])
+
+db.trainers.insertMany([
+  { trainer_id: 1, name: "Андрій Мельник", specialization: "Силові тренування" },
+  { trainer_id: 2, name: "Наталія Шевченко", specialization: "Кардіо" },
+  { trainer_id: 3, name: "Дмитро Сидоренко", specialization: "Кросфіт" }
+])
